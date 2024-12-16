@@ -82,8 +82,11 @@ function App() {
         <Text>
           На улице: {temp}°C
         </Text>
-        {temp < tempPoint ? <Text>На улице холодно, лучше остаться дома и прочитать книгу Стивена Кинга: {dataArr[Math.floor(Math.random() * (dataArr.length + 1))].Title}</Text> : null}
-      </Groups>
+        {temp < tempPoint 
+          ? <Text>На улице холодно, лучше остаться дома и прочитать книгу Стивена Кинга, например: {dataArr[Math.floor(Math.random() * (dataArr.length + 1))].Title}</Text> 
+          : <Text>На улице тепло, берите мороженое и отправляйтесь на прогулку!</Text>}
+        </Groups>
+        <br />
 
       {dataArr?.length !== 0 
       ? (

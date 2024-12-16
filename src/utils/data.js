@@ -1,7 +1,9 @@
 export const citiesCoords = {
   'Moscow': { lat: 55.755825, lon: 37.617298 },
   'New York': { lat: 40.712776, lon: -74.005974 },
-  'Vienna': { lat: 48.208176, lon: 16.373819 }
+  'Vienna': { lat: 48.208176, lon: 16.373819 },
+  'Lisbon': { lat: 38.722252, lon: -9.139337 },
+  'Murmansk': { lat: 68.972603, lon: 33.084560 },
 }
 
 export const APIkey = '02ba2a15859f5f5e466672f4093f0af5';

@@ -63,3 +63,17 @@ input:focus {
     grid-template-columns: 1fr;
   }
 }
+
+.button {
+  width: calc(100% - 30vw + 20px);
+  border: 1px solid gray;
+  background-color: transparent;
+  height: 40px;
+  margin: 0 auto 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
