@@ -9,3 +9,8 @@ export const APIkey = '02ba2a15859f5f5e466672f4093f0af5';
 export function getFetchUrl(lat, lon, APIkey) {
   return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`
 }
+
+export const omolokoUrl = 'https://webapi.omoloko.ru/api/v1/products';
+export const stephenKingUrl = 'https://stephen-king-api.onrender.com/api/books';
+
+export const tempPoint = 0;

@@ -1,5 +1,7 @@
 :root {
   box-sizing: border-box;
+
+  --side-margin: 3%;
 }
 
 .form {
@@ -16,6 +18,13 @@
 }
 
 .section {
-  padding: 0 3% 0;
-  /* max-width: 100%; */
+  padding: 0 var(--side-margin) 0;
+}
+
+.grid {
+  padding: 0 var(--side-margin) 0;
+}
+
+.grid__element {
+  border: 1px solid red;
 }
