@@ -1,10 +1,12 @@
 import './App.css';
 
+import { Body } from 'vienna-ui';
+
 function App() {
   return (
-    <div className="App">
+    <Body>
       App
-    </div>
+    </Body>
   );
 }
 
