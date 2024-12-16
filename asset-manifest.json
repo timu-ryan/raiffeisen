@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/raiffeisen/static/css/main.bb15de40.css",
-    "main.js": "/raiffeisen/static/js/main.254c94c5.js",
+    "main.css": "/raiffeisen/static/css/main.1048a0a2.css",
+    "main.js": "/raiffeisen/static/js/main.10bd869c.js",
     "static/js/488.4eb017ee.chunk.js": "/raiffeisen/static/js/488.4eb017ee.chunk.js",
     "index.html": "/raiffeisen/index.html",
-    "main.bb15de40.css.map": "/raiffeisen/static/css/main.bb15de40.css.map",
-    "main.254c94c5.js.map": "/raiffeisen/static/js/main.254c94c5.js.map",
+    "main.1048a0a2.css.map": "/raiffeisen/static/css/main.1048a0a2.css.map",
+    "main.10bd869c.js.map": "/raiffeisen/static/js/main.10bd869c.js.map",
     "488.4eb017ee.chunk.js.map": "/raiffeisen/static/js/488.4eb017ee.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb15de40.css",
-    "static/js/main.254c94c5.js"
+    "static/css/main.1048a0a2.css",
+    "static/js/main.10bd869c.js"
   ]
 }
