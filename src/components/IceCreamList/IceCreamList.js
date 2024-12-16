@@ -5,14 +5,9 @@ import IceCreamItem from '../IceCreamItem/IceCreamItem'
 const IceCreamList = ({list, setPrice, setNumber}) => {
 
   const [isSorted, setIsSorted] = useState(false);
-  const [visibleNumber, setVisibleNumber] = useState(10);
   const [inputValue, setInputValue] = useState('');
   function handleInputChange(e) {
     setInputValue(e.target.value)
-  }
-
-  function addMoreClick() {
-    setVisibleNumber(visibleNumber => visibleNumber+=2)
   }
   
   return (

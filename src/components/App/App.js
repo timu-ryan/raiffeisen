@@ -8,6 +8,7 @@ import {
   omolokoUrl,
   stephenKingUrl,
   tempPoint,
+  handleKingBookClick,
 } from '../../utils/data.js'
 
 import { 
@@ -18,7 +19,7 @@ import {
   Groups,
   Heading,
   Text,
-  Grid,
+  Button,
 } from 'vienna-ui';
 
 import IceCreamList from '../IceCreamList/IceCreamList'
@@ -26,10 +27,9 @@ import IceCreamList from '../IceCreamList/IceCreamList'
 function App() {
 
   const [currentCity, setCurrentCity] = useState('');
-  const [temp, setTemp] = useState(0);
-  const [secFetchUrl, setSecFetchUrl] = useState('');
-  // const [response, setResponse] = useState({});
-  const [dataArr, setDataArr] = useState([])
+  const [temp, setTemp] = useState(null);
+  const [dataArr, setDataArr] = useState([]);
+  const [randomBook, setRandomBook] = useState('');
   let temperature;
   
   useEffect(() => {
@@ -48,6 +48,7 @@ function App() {
           let arr = temperature > tempPoint ? res.products : res.data;
           setDataArr(arr)
           setTemp(temperature)
+          setRandomBook(arr[Math.floor(Math.random() * (dataArr.length + 1))]?.Title)
         })
         .catch((err) => console.error("Error:", err));
     }
@@ -55,7 +56,7 @@ function App() {
   }, [currentCity])
 
   useEffect(() => {
-    console.log(dataArr)
+    // console.log(dataArr)
   }, [dataArr])
 
   const handleSelect = (e, data) => setCurrentCity(data.value);
@@ -79,12 +80,22 @@ function App() {
         <Text>
           Введите свой город и мы поможем спланировать вам день
         </Text>
-        <Text>
-          На улице: {temp}°C
-        </Text>
+        {temp !== null 
+          && <Text>
+            На улице: {temp}°C
+          </Text>
+        }
         {temp < tempPoint 
-          ? <Text>На улице холодно, лучше остаться дома и прочитать книгу Стивена Кинга, например: {dataArr[Math.floor(Math.random() * (dataArr.length + 1))].Title}</Text> 
-          : <Text>На улице тепло, берите мороженое и отправляйтесь на прогулку!</Text>}
+          ? temp !== null && 
+            <Text>
+              На улице холодно, лучше остаться дома и прочитать книгу Стивена Кинга, например: 
+              <Button design='outline' style={{ marginLeft: "10px" }} onClick={() => { handleKingBookClick(randomBook) }}>
+                {randomBook}
+              </Button>
+            </Text> 
+          : temp !== null && <Text>На улице тепло, берите мороженое и отправляйтесь на прогулку!</Text>
+        }
+        
         </Groups>
         <br />
 

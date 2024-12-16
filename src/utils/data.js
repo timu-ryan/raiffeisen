@@ -18,3 +18,8 @@ export const omolokoUrl = 'https://webapi.omoloko.ru/api/v1/products';
 export const stephenKingUrl = 'https://stephen-king-api.onrender.com/api/books';
 
 export const tempPoint = 0;
+
+export function handleKingBookClick(book) {
+  const formattedBook = book.replaceAll(' ', '+') + '+Stephen+King';
+  window.open(`https://www.google.com/search?q=${formattedBook}`, "_blank");
+}
